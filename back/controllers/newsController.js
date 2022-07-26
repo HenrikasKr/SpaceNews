@@ -1,6 +1,5 @@
 const News = require("../models/newsModel");
 
-// Gauti visus studentus
 exports.getAllNews = async (req, res) => {
   try {
     const news = await News.find();
@@ -19,7 +18,6 @@ exports.getAllNews = async (req, res) => {
   }
 };
 
-// Sukurti studentą
 exports.createNews = async (req, res) => {
   try {
     const newNews = await News.create(req.body);
@@ -37,7 +35,6 @@ exports.createNews = async (req, res) => {
   }
 };
 
-// Gauti studentą pagal ID
 exports.getNewsById = async (req, res) => {
   try {
     const news = await News.findById(req.params.id);
@@ -55,7 +52,6 @@ exports.getNewsById = async (req, res) => {
   }
 };
 
-// Atnaujinti esamą studentą
 exports.updateNews = async (req, res) => {
   try {
     const news = await News.findByIdAndUpdate(req.params.id, req.body, {
@@ -79,7 +75,6 @@ exports.updateNews = async (req, res) => {
   }
 };
 
-// Pašalinti studentą pagal ID
 exports.deleteNews = async (req, res) => {
   try {
     await News.findByIdAndDelete(req.params.id);

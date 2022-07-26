@@ -9,7 +9,7 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log("Prisijungta prie DB...:)");
+    console.log("Successfully connected to a DB");
   });
 
 const port = 4000;

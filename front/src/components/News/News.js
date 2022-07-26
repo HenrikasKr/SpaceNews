@@ -19,6 +19,7 @@ function News() {
     }, [])
 
     var newsMap = news.map((item) => {
+        const key = item._id
         const title = item.title;
         const content = item.content;
         const image = item.image;
@@ -31,7 +32,8 @@ function News() {
                     </div>
                     <div className='content-card col-9'>
                         <h5>{title}</h5>
-                        <p>{content}<a href={article}>Read the article...</a></p>
+                        <p>{content}</p>
+                        <a href={article}>Read the article...</a>
                     </div>
                 </div>
             </div>
